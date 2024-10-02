@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            background-color: #575891;
+            padding: 10px 0;
+        }
+
+        .container-list {
+            list-style-type: none;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: auto;
+        }
+
+        .container-list .item a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-size: 18px;
+        }
+
+        .container-list .item a:hover {
+            background-color: #e78a08;
+            border-radius: 5px;
+        }
+
+        .gallery {
+            display: grid;
+            gap: 10px;
+            padding: 10px;
+        }
+
+        /* Diseño para pantallas pequeñas (1 columna) */
+        .gallery {
+            grid-template-columns: 1fr;
+        }
+
+        /* Diseño para pantallas medianas (2 columnas) */
+        @media (min-width: 600px) {
+            .gallery {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        /* Diseño para pantallas grandes (2x2) */
+        @media (min-width: 1024px) {
+            .gallery {
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: auto auto;
+            }
+        }
+
+        .gallery img {
+            display: block;
+            /* Esto sirve para que el margin: auto funcione en imágenes */
+            margin: 0 auto;
+            /* y asi podríamos centrar horizontalmente */
+            width: 20%;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <ul class="container-list">
+            <li class="item"><a href="#home">Home</a></li>
+            <li class="item"><a href="#about">About</a></li>
+            <li class="item"><a href="#services">Services</a></li>
+            <li class="item"><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <section class="gallery">
+        <img src="https://dragonball-api.com/characters/goku_normal.webp" alt="Goku">
+        <img src="https://dragonball-api.com/characters/vegeta_normal.webp" alt="Vegeta">
+        <img src="https://dragonball-api.com/characters/Beerus_DBS_Broly_Artwork.webp" alt="Beerus">
+        <img src="https://dragonball-api.com/characters/bulma.webp" alt="Bulma">
+    </section>
+</body>
+
+</html>
