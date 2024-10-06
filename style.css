@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.navbar {
+    background-color: #575891;
+    padding: 10px 0;
+}
+
+.container-list {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-list .item a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container-list .item a:hover {
+    background-color: #e78a08;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.boton-transformacion {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.botones {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.botones:hover {
+    background-color: #ffa500;
+}
+
+.images {
+    display: grid;
+    gap: 20px;
+    padding: 10px;
+    justify-items: center;
+}
+
+.images img {
+    width: 100px; /* Dimensión fija */
+    height: 150px; /* Dimensión fija */
+    object-fit:contain; /*Mantener proporción sin distorsionar */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.5s ease, transform 0.3s ease;
+}
+
+.images img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Diseño para pantallas pequeñas (1 columna) */
+.images {
+    grid-template-columns: 1fr;
+}
+
+/* Diseño para pantallas medianas (2 columnas) */
+@media (min-width: 600px) {
+    .images {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Diseño para pantallas grandes (4 columnas) */
+@media (min-width: 1024px) {
+    .images {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
