@@ -4,95 +4,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-        }
-
-        .navbar {
-            background-color: #575891;
-            padding: 10px 0;
-        }
-
-        .container-list {
-            list-style-type: none;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            width: auto;
-        }
-
-        .container-list .item a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 20px;
-            font-size: 18px;
-        }
-
-        .container-list .item a:hover {
-            background-color: #e78a08;
-            border-radius: 5px;
-        }
-
-        .gallery {
-            display: grid;
-            gap: 10px;
-            padding: 10px;
-        }
-
-        /* Diseño para pantallas pequeñas (1 columna) */
-        .gallery {
-            grid-template-columns: 1fr;
-        }
-
-        /* Diseño para pantallas medianas (2 columnas) */
-        @media (min-width: 600px) {
-            .gallery {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
-
-        /* Diseño para pantallas grandes (2x2) */
-        @media (min-width: 1024px) {
-            .gallery {
-                grid-template-columns: 1fr 1fr;
-                grid-template-rows: auto auto;
-            }
-        }
-
-        .gallery img {
-            display: block;
-            /* Esto sirve para que el margin: auto funcione en imágenes */
-            margin: 0 auto;
-            /* y asi podríamos centrar horizontalmente */
-            width: 20%;
-            height: auto;
-        }
-    </style>
+    <title>Dragon Ball Transformaciones</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <nav class="navbar">
-        <ul class="container-list">
-            <li class="item"><a href="#home">Home</a></li>
-            <li class="item"><a href="#about">About</a></li>
-            <li class="item"><a href="#services">Services</a></li>
-            <li class="item"><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+    <header>
+        <nav class="navbar">
+            <ul class="container-list">
+                <li class="item"><a href="#home">Home</a></li>
+                <li class="item"><a href="#about">About</a></li>
+                <li class="item"><a href="#services">Services</a></li>
+                <li class="item"><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
     <section class="gallery">
-        <img src="https://dragonball-api.com/characters/goku_normal.webp" alt="Goku">
-        <img src="https://dragonball-api.com/characters/vegeta_normal.webp" alt="Vegeta">
-        <img src="https://dragonball-api.com/characters/Beerus_DBS_Broly_Artwork.webp" alt="Beerus">
-        <img src="https://dragonball-api.com/characters/bulma.webp" alt="Bulma">
+        <div class="boton-transformacion">
+            <button class="botones" data-image="goku_ssj.webp">Transformar Goku</button>
+            <button class="botones" data-image="vegeta%20SSJ%20(2).webp">Transformar Vegeta</button>
+            <button class="botones" data-image="Semi-Perfect_Cell.webp">Transformar Cell</button>
+            <button class="botones" data-image="Broly_Super_Saiyajin_Legendario_1.webp">Transformar Broly</button>
+        </div>
+        <div class="images">
+            <img id="img1" src="https://dragonball-api.com/characters/goku_normal.webp" alt="Goku">
+            <img id="img2" src="https://dragonball-api.com/characters/vegeta_normal.webp" alt="Vegeta">
+            <img id="img3" src="https://dragonball-api.com/characters/celula.webp" alt="Cell">
+            <img id="img4" src="https://dragonball-api.com/transformaciones/Broly_DBS_Base.webp" alt="Broly">
+        </div>
     </section>
+    <script src="script.js"></script>
 </body>
 
 </html>
